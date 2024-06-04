@@ -14,7 +14,7 @@ const Header = () => {
             <div className="container mx-auto flex justify-between items-center">
                 <div className="text-xl md:text-3xl font-bold flex items-center justify-center md:justify-start">
                     <span className="text-white">Sebastián</span>
-                    <span className="text-neonRed ml-2">Osorio</span>
+                    <span className="text-red-700 ml-2">Osorio</span>
                 </div>
                 <nav className="hidden md:flex justify-end space-x-4 md:space-x-6 text-sm md:text-lg w-3/5">
                     <a href="#about" className="transition duration-300 text-white hover:text-neonRed">
