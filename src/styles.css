@@ -1,0 +1,16 @@
+body {
+  overflow-x: hidden;
+}
+
+.neon-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.neon-shadow:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.text-red-700 {
+  color: #f60b0b;
+}

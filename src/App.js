@@ -9,11 +9,19 @@ function App() {
   return (
     <div className="App bg-black min-h-screen text-white">
       <Header />
-      <main className="pt-24 md:pt-28 container mx-auto p-6"> {/* Añadimos un relleno superior aquí */}
-        <About />
-        <Projects />
-        <Education />
-        <Contact />
+      <main className="pt-24 container mx-auto p-6"> {/* Añadimos un relleno superior aquí */}
+        <section id="about">
+          <About />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="education">
+          <Education />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </main>
     </div>
   );

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 .neon-effect {
-  text-shadow: 0 0 5px #ff073a, 0 0 10px #ff073a, 0 0 20px #ff073a,
-    0 0 40px #ff073a;
+  text-shadow: 0 0 5px #f60b0b, 0 0 10px #f60b0b, 0 0 20px #f60b0b,
+    0 0 40px #f60b0b;
 }
 
 .backdrop-filter {
@@ -15,10 +15,73 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.text-neonRed {
-  color: #ff073a;
+.text-red-500 {
+  color: #f60b0b;
 }
 
-.hover\:text-neonRed:hover {
-  color: #ff073a;
+.hover\:text-red-500:hover {
+  color: #f60b0b;
+}
+
+.active {
+  color: #f60b0b;
+  border-bottom: 2px solid #f60b0b;
+}
+
+.neon-shadow {
+  box-shadow: 0 0 10px #f60b0b, 0 0 20px #f60b0b, 0 0 30px #f60b0b,
+    0 0 40px #f60b0b;
+}
+
+.btn-neon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #f60b0b;
+  color: #f60b0b;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #f60b0b;
+}
+
+.btn-neon:hover {
+  box-shadow: 0 0 20px #f60b0b, 0 0 30px #f60b0b, 0 0 40px #f60b0b;
+  background: #f60b0b;
+  color: black;
+}
+
+.btn-download-cv,
+.btn-contact {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #f60b0b;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #f60b0b;
+}
+
+.btn-download-cv {
+  color: black;
+  background: #f60b0b;
+}
+
+.btn-contact {
+  color: #f60b0b;
+  background: black;
+}
+
+.btn-download-cv:hover,
+.btn-contact:hover {
+  box-shadow: 0 0 20px #f60b0b, 0 0 30px #f60b0b, 0 0 40px #f60b0b;
+  background: #f60b0b;
+  color: black;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }

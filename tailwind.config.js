@@ -8,9 +8,13 @@ module.exports = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
+      boxShadow: {
+        '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+      },
       colors: {
-        neonRed: '#FF073A',
-        neonBlue: '#00FFFF',
+        red: {
+          '700': '#f60b0b',
+        },
       },
     },
   },
@@ -18,6 +22,5 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/line-clamp'),
   ],
 }

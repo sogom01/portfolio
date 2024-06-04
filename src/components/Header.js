@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Scrollspy from 'react-scrollspy';
+import { Link } from 'react-scroll';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -9,50 +11,121 @@ const Header = () => {
         setIsOpen(!isOpen);
     };
 
+    const reloadPage = () => {
+        window.location.reload();
+    };
+
     return (
-        <header className="bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg text-white p-10 md:p-6 font-poppins fixed top-0 w-full z-50 shadow-lg transition-all duration-300">
-            <div className="container mx-auto flex justify-between items-center">
-                <div className="text-xl md:text-3xl font-bold flex items-center justify-center md:justify-start">
+        <header className="bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg text-white p-6 font-poppins fixed top-0 w-full z-50 shadow-lg">
+            <div className="container mx-auto flex justify-between items-center px-10">
+                <div
+                    className={`w-2/5 text-3xl font-bold flex items-center cursor-pointer transform transition-transform duration-300 hover:scale-105 ${isOpen ? 'justify-center w-full' : ''}`}
+                    onClick={reloadPage}
+                >
                     <span className="text-white">Sebastián</span>
-                    <span className="text-red-700 ml-2">Osorio</span>
+                    <span className="text-red-700 ml-2"> Osorio</span>
                 </div>
-                <nav className="hidden md:flex justify-end space-x-4 md:space-x-6 text-sm md:text-lg w-3/5">
-                    <a href="#about" className="transition duration-300 text-white hover:text-neonRed">
-                        About
-                    </a>
-                    <a href="#projects" className="transition duration-300 text-white hover:text-neonRed">
-                        Projects
-                    </a>
-                    <a href="#education" className="transition duration-300 text-white hover:text-neonRed">
-                        Education
-                    </a>
-                    <a href="#contact" className="transition duration-300 text-white hover:text-neonRed">
-                        Contact
-                    </a>
-                </nav>
+                {!isOpen && (
+                    <nav className="hidden md:flex w-3/5 justify-end">
+                        <Scrollspy
+                            items={['about', 'projects', 'education', 'contact']}
+                            currentClassName="text-red-700"
+                            className="flex space-x-6 text-lg"
+                        >
+                            <Link
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                duration={500}
+                                className="hover:text-red-700 relative cursor-pointer"
+                            >
+                                About
+                                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-red-700 scale-x-0 hover:scale-x-100 transition-transform duration-300"></div>
+                            </Link>
+                            <Link
+                                to="projects"
+                                spy={true}
+                                smooth={true}
+                                duration={500}
+                                className="hover:text-red-700 relative cursor-pointer"
+                            >
+                                Projects
+                                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-red-700 scale-x-0 hover:scale-x-100 transition-transform duration-300"></div>
+                            </Link>
+                            <Link
+                                to="education"
+                                spy={true}
+                                smooth={true}
+                                duration={500}
+                                className="hover:text-red-700 relative cursor-pointer"
+                            >
+                                Education
+                                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-red-700 scale-x-0 hover:scale-x-100 transition-transform duration-300"></div>
+                            </Link>
+                            <Link
+                                to="contact"
+                                spy={true}
+                                smooth={true}
+                                duration={500}
+                                className="hover:text-red-700 relative cursor-pointer"
+                            >
+                                Contact
+                                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-red-700 scale-x-0 hover:scale-x-100 transition-transform duration-300"></div>
+                            </Link>
+                        </Scrollspy>
+                    </nav>
+                )}
                 <div className="md:hidden text-3xl cursor-pointer" onClick={toggleMenu}>
                     {isOpen ? <FaTimes /> : <FaBars />}
                 </div>
             </div>
             {isOpen && (
                 <motion.div
-                    className="md:hidden bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg text-white p-6 space-y-4 text-lg absolute top-full left-0 w-full shadow-lg z-10 flex flex-col items-center"
+                    className="md:hidden bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg text-white p-6 space-y-4 text-lg absolute top-full left-0 w-full shadow-lg z-10 flex flex-col items-center justify-center"
                     initial={{ height: 0 }}
                     animate={{ height: 'auto' }}
                     transition={{ duration: 0.3 }}
                 >
-                    <a href="#about" className="block transition duration-300 text-white hover:text-neonRed" onClick={toggleMenu}>
+                    <Link
+                        to="about"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        className="block transition duration-300 text-white hover:text-red-700"
+                        onClick={toggleMenu}
+                    >
                         About
-                    </a>
-                    <a href="#projects" className="block transition duration-300 text-white hover:text-neonRed" onClick={toggleMenu}>
+                    </Link>
+                    <Link
+                        to="projects"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        className="block transition duration-300 text-white hover:text-red-700"
+                        onClick={toggleMenu}
+                    >
                         Projects
-                    </a>
-                    <a href="#education" className="block transition duration-300 text-white hover:text-neonRed" onClick={toggleMenu}>
+                    </Link>
+                    <Link
+                        to="education"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        className="block transition duration-300 text-white hover:text-red-700"
+                        onClick={toggleMenu}
+                    >
                         Education
-                    </a>
-                    <a href="#contact" className="block transition duration-300 text-white hover:text-neonRed" onClick={toggleMenu}>
+                    </Link>
+                    <Link
+                        to="contact"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        className="block transition duration-300 text-white hover:text-red-700"
+                        onClick={toggleMenu}
+                    >
                         Contact
-                    </a>
+                    </Link>
                 </motion.div>
             )}
         </header>
