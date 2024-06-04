@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header';
+import About from './components/About';
+import Projects from './components/Projects';
+import Education from './components/Education';
+import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-black min-h-screen text-white">
+      <Header />
+      <main className="pt-24 md:pt-28 container mx-auto p-6"> {/* Añadimos un relleno superior aquí */}
+        <About />
+        <Projects />
+        <Education />
+        <Contact />
+      </main>
     </div>
   );
 }

@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.neon-effect {
+  text-shadow: 0 0 5px #ff073a, 0 0 10px #ff073a, 0 0 20px #ff073a,
+    0 0 40px #ff073a;
+}
+
+.backdrop-filter {
+  backdrop-filter: blur(10px);
+}
+
+.bg-opacity-50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.text-neonRed {
+  color: #ff073a;
+}
+
+.hover\:text-neonRed:hover {
+  color: #ff073a;
+}
