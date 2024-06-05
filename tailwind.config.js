@@ -3,6 +3,8 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  darkMode: false,
   theme: {
     extend: {
       fontFamily: {
@@ -16,6 +18,8 @@ module.exports = {
           '700': '#f60b0b',
         },
       },
+      opacity: ['group-hover'],
+
     },
   },
   plugins: [

@@ -40,7 +40,7 @@ const About = () => {
     return (
         <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-transparent p-6 overflow-hidden">
             <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
-                <div className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-red transition-shadow duration-300 hover:shadow-red-lg">
+                <div className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-neon transition-shadow duration-300 hover:shadow-neon-lg">
                     <img src={profileImage} alt="Profile" className="object-cover w-full h-full" />
                 </div>
             </div>

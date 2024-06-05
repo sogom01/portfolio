@@ -51,3 +51,13 @@
   box-shadow: 0 0 15px rgba(246, 11, 11, 1), 0 0 30px rgba(246, 11, 11, 1),
     0 0 45px rgba(246, 11, 11, 1);
 }
+
+.shadow-neon {
+  box-shadow: 0 0 10px rgba(246, 11, 11, 0.5), 0 0 20px rgba(246, 11, 11, 0.5),
+    0 0 30px rgba(246, 11, 11, 0.5);
+}
+
+.shadow-neon-lg:hover {
+  box-shadow: 0 0 15px rgba(246, 11, 11, 1), 0 0 30px rgba(246, 11, 11, 1),
+    0 0 45px rgba(246, 11, 11, 1);
+}
