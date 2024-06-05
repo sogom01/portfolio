@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiX } from 'react-icons/si';
 
 const About = () => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const roles = ['Desarrollador de Software', 'Desarrollador front-end', 'Diseñador de UI/UX', 'Tester de Software', 'Analista de datos'];
 
     const [currentRole, setCurrentRole] = useState(0);
@@ -38,7 +39,7 @@ const About = () => {
     }, [currentRole, deleting, roles]);
 
     return (
-        <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-transparent p-6 overflow-hidden">
+        <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-transparent p-6 overflow-hidden font-poppins">
             <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
                 <div className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-neon transition-shadow duration-300 hover:shadow-neon-lg">
                     <img src={profileImage} alt="Profile" className="object-cover w-full h-full" />

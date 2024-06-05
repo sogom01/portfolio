@@ -16,6 +16,8 @@ module.exports = {
       colors: {
         red: {
           '700': '#f60b0b',
+          neonRed: '#f60b0b',
+          neonShadow: 'rgba(255, 0, 0, 0.5)',
         },
       },
       opacity: ['group-hover'],

@@ -16,10 +16,10 @@ function App() {
         <section id="projects">
           <Projects />
         </section>
-        {/* <section id="education">
+        <section id="education">
           <Education />
         </section>
-        <section id="contact">
+        {/* <section id="contact">
           <Contact />
         </section> */}
       </main>
