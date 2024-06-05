@@ -17,11 +17,11 @@ const projects = [
         title: 'Project Two',
         technologies: [FaHtml5, FaCss3Alt, FaGithub],
     },
-    {
-        image: Proyecto1,
-        title: 'Project Three',
-        technologies: [FaReact, FaJs, FaNode],
-    },
+    // {
+    //     image: Proyecto1,
+    //     title: 'Project Three',
+    //     technologies: [FaReact, FaJs, FaNode],
+    // },
 ];
 
 const Projects = () => {
