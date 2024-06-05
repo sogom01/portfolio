@@ -66,7 +66,8 @@ const About = () => {
                     </a>
                 </div>
                 <div className="flex flex-col md:flex-row justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-4 mt-4 w-full">
-                    <a href="/Curriculum-Vitae.pdf" target="_blank" rel="noopener noreferrer" className="btn-neon-cv rounded-full text-center px-6 py-2 whitespace-nowrap">
+                    {/* <a href="/Curriculum-Vitae.pdf" target="_blank" rel="noopener noreferrer" className="btn-neon-cv rounded-full text-center px-6 py-2 whitespace-nowrap"> */}
+                    <a href="#.pdf" target="_blank" rel="noopener noreferrer" className="btn-neon-cv rounded-full text-center px-6 py-2 whitespace-nowrap">
                         Descargar CV
                     </a>
                     <a href="mailto:your-email@example.com" className="btn-neon rounded-full text-center px-6 py-2 whitespace-nowrap">

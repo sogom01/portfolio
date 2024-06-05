@@ -22,8 +22,10 @@ const Header = () => {
                     className={`text-xl md:text-3xl font-bold flex items-center cursor-pointer transform transition-transform duration-300 hover:scale-105 ${isOpen ? 'justify-center w-full' : 'w-2/5'}`}
                     onClick={reloadPage}
                 >
-                    <span className="text-white">Sebastián</span>
-                    <span className="text-red-700 ml-2"> Osorio</span>
+                    <a href="/">
+                        <span className="text-white">Sebastián</span>
+                        <span className="text-red-700 ml-2"> Osorio</span>
+                    </a>
                 </div>
                 {!isOpen && (
                     <nav className="hidden md:flex w-3/5 justify-end">
