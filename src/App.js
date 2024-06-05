@@ -13,7 +13,7 @@ function App() {
         <section id="about">
           <About />
         </section>
-        <section id="projects">
+        {/* <section id="projects">
           <Projects />
         </section>
         <section id="education">
@@ -21,7 +21,7 @@ function App() {
         </section>
         <section id="contact">
           <Contact />
-        </section>
+        </section> */}
       </main>
     </div>
   );

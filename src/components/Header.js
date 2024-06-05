@@ -16,10 +16,10 @@ const Header = () => {
     };
 
     return (
-        <header className="bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg text-white p-6 font-poppins fixed top-0 w-full z-50 shadow-lg">
-            <div className="container mx-auto flex justify-between items-center px-10">
+        <header className="bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg text-white p-4 font-poppins fixed top-0 w-full z-50 shadow-lg">
+            <div className="container mx-auto flex justify-between items-center px-4 md:px-10">
                 <div
-                    className={`w-2/5 text-3xl font-bold flex items-center cursor-pointer transform transition-transform duration-300 hover:scale-105 ${isOpen ? 'justify-center w-full' : ''}`}
+                    className={`text-xl md:text-3xl font-bold flex items-center cursor-pointer transform transition-transform duration-300 hover:scale-105 ${isOpen ? 'justify-center w-full' : 'w-2/5'}`}
                     onClick={reloadPage}
                 >
                     <span className="text-white">Sebastián</span>
@@ -30,7 +30,7 @@ const Header = () => {
                         <Scrollspy
                             items={['about', 'projects', 'education', 'contact']}
                             currentClassName="text-red-700"
-                            className="flex space-x-6 text-lg"
+                            className="flex space-x-4 md:space-x-6 text-sm md:text-lg"
                         >
                             <Link
                                 to="about"
@@ -81,7 +81,7 @@ const Header = () => {
             </div>
             {isOpen && (
                 <motion.div
-                    className="md:hidden bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg text-white p-6 space-y-4 text-lg absolute top-full left-0 w-full shadow-lg z-10 flex flex-col items-center justify-center"
+                    className="md:hidden bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg text-white p-6 space-y-4 text-sm md:text-lg absolute top-full left-0 w-full shadow-lg z-10 flex flex-col items-center justify-center"
                     initial={{ height: 0 }}
                     animate={{ height: 'auto' }}
                     transition={{ duration: 0.3 }}
