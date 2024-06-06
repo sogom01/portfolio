@@ -3,12 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
-    "start:frontend": "cd frontend && npm start",
-    "start:backend": "cd backend && node index.js",
     "build": "cd frontend && npm run build"
-  },
-  "dependencies": {
-    "concurrently": "^7.0.0"
   }
 }
