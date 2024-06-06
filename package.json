@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "cd frontend && npm install --legacy-peer-deps && npm run build"
+    "install:frontend": "cd frontend && npm install --legacy-peer-deps",
+    "build": "npm run install:frontend && npm run build:frontend",
+    "build:frontend": "cd frontend && npm run build"
   }
 }
