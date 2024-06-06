@@ -7,12 +7,10 @@ const Contact = () => {
     const [message, setMessage] = useState('');
     const [status, setStatus] = useState('');
 
-    const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/contact';
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(API_URL, { name, phone, message });
+            await axios.post('http://localhost:5000/api/contact', { name, phone, message });
             setStatus('Message sent successfully!');
             setName('');
             setPhone('');
