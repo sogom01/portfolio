@@ -50,17 +50,14 @@ const EducationTimeline = () => {
     return (
         <div className="container mx-auto px-4 py-8 font-poppins">
             <h2 className="text-3xl font-bold mb-8 text-center text-white">Formación Académica</h2>
-            <div className="relative">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {educationData.map((item, index) => (
-                    <div key={index} className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'} my-4`}>
-                        <div className="bg-black border-2 border-red-700 shadow-lg shadow-red-700/50 p-6 rounded-3xl transform hover:scale-105 transition-transform duration-300">
-                            <h3 className="text-xl font-semibold text-white mb-2">{item.year} - {item.title}</h3>
-                            <h4 className="text-md font-medium text-gray-400 mb-1">{item.institution}</h4>
-                            <p className="text-gray-300">{item.description}</p>
-                        </div>
+                    <div key={index} className="bg-black border-2 border-red-700 shadow-lg shadow-red-700/50 p-6 rounded-3xl transform hover:scale-105 transition-transform duration-300">
+                        <h3 className="text-xl font-semibold text-white mb-2">{item.year} - {item.title}</h3>
+                        <h4 className="text-md font-medium text-gray-400 mb-1">{item.institution}</h4>
+                        <p className="text-gray-300">{item.description}</p>
                     </div>
                 ))}
-                <div className="timeline-line absolute w-1 bg-red-600 left-1/2 transform -translate-x-1/2 top-0 bottom-0"></div>
             </div>
         </div>
     );
