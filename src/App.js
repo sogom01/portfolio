@@ -19,9 +19,9 @@ function App() {
         <section id="education">
           <Education />
         </section>
-        {/* <section id="contact">
+        <section id="contact">
           <Contact />
-        </section> */}
+        </section>
       </main>
     </div>
   );
