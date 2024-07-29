@@ -1,4 +1,3 @@
-// src/components/EducationTimeline.js
 import React from 'react';
 
 const EducationTimeline = () => {
@@ -48,17 +47,19 @@ const EducationTimeline = () => {
     ];
 
     return (
-        <div className="container mx-auto px-4 py-8 font-poppins">
+        <div className="container mx-auto px-4 py-8 font-poppins bg-transparent">
             <h2 className="text-3xl font-bold mb-8 text-center text-white">Formación Académica</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ol className="relative border-s border-gray-200 dark:border-gray-700">
                 {educationData.map((item, index) => (
-                    <div key={index} className="bg-black border-2 border-red-700 shadow-lg shadow-red-700/50 p-6 rounded-3xl transform hover:scale-105 transition-transform duration-300">
-                        <h3 className="text-xl font-semibold text-white mb-2">{item.year} - {item.title}</h3>
-                        <h4 className="text-md font-medium text-gray-400 mb-1">{item.institution}</h4>
-                        <p className="text-gray-300">{item.description}</p>
-                    </div>
+                    <li key={index} className="mb-10 ms-4">
+                        <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-red-700"></div>
+                        <time className="mb-1 text-sm font-bold leading-none text-gray-400 dark:text-white">{item.year}</time>
+                        <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                        <h4 className="text-md font-medium text-white mb-1">{item.institution}</h4>
+                        <p className="text-base font-normal text-gray-300 dark:text-gray-400">{item.description}</p>
+                    </li>
                 ))}
-            </div>
+            </ol>
         </div>
     );
 };
